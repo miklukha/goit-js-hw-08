@@ -31,7 +31,12 @@ function populateFieldForm() {
   const parsedFormData = JSON.parse(savedFormData);
 
   if (savedFormData) {
-    feedbackFormRef.email.value = parsedFormData.email;
-    feedbackFormRef.message.value = parsedFormData.message;
+    if (parsedFormData.email) {
+      feedbackFormRef.email.value = parsedFormData.email;
+    }
+
+    if (parsedFormData.message) {
+      feedbackFormRef.message.value = parsedFormData.message;
+    }
   }
 }
