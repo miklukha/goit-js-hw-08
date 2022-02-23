@@ -21,13 +21,7 @@ function onFieldsFormInput(e) {
 function onSubmitForm(e) {
   e.preventDefault();
 
-  const formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-
-  if (formData.email === '' || formData.message === '') {
-    return;
-  }
-
-  console.log(formData);
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
 
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
